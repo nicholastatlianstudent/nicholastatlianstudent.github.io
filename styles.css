@@ -9,7 +9,7 @@
     --card-bg-dark: #1a1a1a;
     --hover-dark: #222;
 
-    --gold: #ffd700;
+    --gold: #ff8000;
     --radius: 12px;
     --transition: all 0.3s ease;
 }
@@ -44,7 +44,24 @@ body {
     min-height: 100vh;
     padding: 2rem;
     transition: var(--transition);
+    position: relative;
+    overflow-x: hidden;
 }
+
+body::before {
+    content: '';
+    position: fixed;
+    bottom: -50px;
+    right: -100px;
+    width: 400px;
+    height: 200px;
+    background: linear-gradient(135deg, rgba(255, 128, 0, 0.15) 0%, transparent 70%);
+    border-radius: 20px;
+    transform: rotate(-15deg);
+    z-index: -1;
+}
+
+
 
 .container {
     max-width: 480px;
@@ -55,6 +72,18 @@ body {
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
     text-align: center;
     transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #ff8000 0%, #ff6600 50%, #ff8000 100%);
 }
 
 .avatar {
