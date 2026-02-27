@@ -9,9 +9,13 @@
     --card-bg-dark: #1a1a1a;
     --hover-dark: #333;
 
+<<<<<<< HEAD
     --mclaren-orange: #ff9933;
     --mclaren-black: #000000;
     --gold: #ff9933;
+=======
+    --gold: #ff8000;
+>>>>>>> a6c24640e998d7c1bf459694ab95c1fe47639a9a
     --radius: 12px;
     --transition: all 0.3s ease;
     
@@ -53,7 +57,24 @@ body {
     min-height: 100vh;
     padding: 2rem;
     transition: var(--transition);
+    position: relative;
+    overflow-x: hidden;
 }
+
+body::before {
+    content: '';
+    position: fixed;
+    bottom: -50px;
+    right: -100px;
+    width: 400px;
+    height: 200px;
+    background: linear-gradient(135deg, rgba(255, 128, 0, 0.15) 0%, transparent 70%);
+    border-radius: 20px;
+    transform: rotate(-15deg);
+    z-index: -1;
+}
+
+
 
 .container {
     max-width: 480px;
@@ -75,7 +96,11 @@ body {
     left: 0;
     right: 0;
     height: 4px;
+<<<<<<< HEAD
     background: linear-gradient(90deg, var(--mclaren-orange) 0%, var(--mclaren-black) 50%, var(--mclaren-orange) 100%);
+=======
+    background: linear-gradient(90deg, #ff8000 0%, #ff6600 50%, #ff8000 100%);
+>>>>>>> a6c24640e998d7c1bf459694ab95c1fe47639a9a
 }
 
 .avatar {
